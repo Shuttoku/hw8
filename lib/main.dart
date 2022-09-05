@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Food Menu"),
-          backgroundColor: Color.fromARGB(255, 255, 98, 150),
+          backgroundColor: Color.fromARGB(255, 39, 37, 37),
         ),
         body: Menu(),
+        backgroundColor: Color.fromARGB(255, 197, 196, 196),
       ),
     );
     

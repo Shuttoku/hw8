@@ -14,27 +14,33 @@ class _MenuState extends State<Menu> {
     [
       "https://www.amarinbabyandkids.com/app/uploads/2022/05/%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%88%E0%B8%B5%E0%B8%A2%E0%B8%A7FB.jpg",
       "ไข่เจียวหาดใหญ่",
-      80
+      "ไข่เจียวนุ่มฟูต้นตำรับมาจากหาดใหญ่ที่เป็นหาดไม่เล็ก"
+      
     ],
     [
       "https://food.mthai.com/app/uploads/2014/12/iStock-494899370.jpg",
       "ไข่กระทะฮาวาย",
-      90
+      "กระทะฮาวายที่เต็มไปด้วยความเร้าร้อนของทราย"
+      
     ],
     [
       "https://images.aws.nestle.recipes/resized/12f17c7de982b57fdf3e4c9091cd3b29_steamed-egg-with-minced-pork_944_531.jpeg",
       "ไข่ตุ๋นคุณหนู",
-      70
+      "ไข่ตุ๋นที่ดูน่ารับประทานมีความหอมละมุนของเห็ดที่ไม่ใช่ผัก"
+   
     ],
     [
       "http://www.pim.in.th/images/all-side-dish-egg/egg-soup-with-mushroom/106.JPG",
       "ไข่น้ำทะเล",
-      80
+      "ไข่น้ำทะเลดังนั้นจะเค็มนิดนึงเพราะเป็นน้ำเค็มไม่ใช่น้ำจืด"
+      
     ],
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
+
+          
     return ListView.builder(
       itemCount: foodLists.length,
       itemBuilder: (_, index) {
@@ -42,65 +48,87 @@ class _MenuState extends State<Menu> {
           // elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.zero,
+             
           ),
           child: Container(
+            
+            
+            
             height: 100,
             width: double.infinity,
+            
+            
             child: Stack(
               children: [
                 Row(
+                  
                   children: [
-                    Image.network(foodLists[index][0],
-                    fit: BoxFit.cover,
-                    width: 150,
+                    Image.network(
+                      foodLists[index][0],
+                      fit: BoxFit.cover,
+                      width: 150,
                     ),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                        children:  [
-                        Text("${foodLists[index][1]}",style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          backgroundColor: Color.fromARGB(255, 237, 125, 166)
-                        ),),
-                        SizedBox(height: 10,),
-
- Text("฿${foodLists[index][2]}",style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 244, 255, 30),
-                          backgroundColor: Color.fromARGB(255, 221, 128, 183)
-                        ),),
-
-
-
-
-
-                      ],
+                        children: [
+                          Text(
+                            "${foodLists[index][1]}",
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 21, 21, 21),
+                                fontWeight: FontWeight.bold,
+                               ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "${foodLists[index][2]}",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 70, 55, 48),
+                            ),
+                          ),
+                          
+                         
+                        ],
                       ),
                     )
                   ],
                 ),
+                
+                
+ Container(
+                  alignment: Alignment.bottomLeft,
+                  child: Chip(
+                    backgroundColor: Color.fromARGB(255, 205, 68, 68),
+                    label: Text(
+                      "฿ 90 ",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                ),
 
 
-Container(
-  alignment: Alignment.bottomCenter,
-  child: Chip(
-    backgroundColor: Color.fromARGB(255, 191, 131, 148),
-    label: Text("Order Now",
-    style: TextStyle(
-   color: Colors.white,
-    fontSize: 12,
-    ),
-  ),
-  ),
-),
-
-
-
-
-
+                Container(
+                  alignment: Alignment.bottomCenter,
+                  child: Chip(
+                    backgroundColor: Color.fromARGB(255, 155, 79, 79),
+                    label: Text(
+                      "Order Now",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
