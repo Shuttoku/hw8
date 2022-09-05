@@ -56,18 +56,51 @@ class _MenuState extends State<Menu> {
                     ),
                     Expanded(
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         children:  [
                         Text("${foodLists[index][1]}",style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          backgroundColor: Color.fromARGB(255, 237, 125, 166)
+                        ),),
+                        SizedBox(height: 10,),
+
+ Text("฿${foodLists[index][2]}",style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          backgroundColor: Color.fromARGB(255, 241, 224, 76)
+                          color: Color.fromARGB(255, 244, 255, 30),
+                          backgroundColor: Color.fromARGB(255, 221, 128, 183)
                         ),),
+
+
+
+
+
                       ],
                       ),
                     )
                   ],
                 ),
+
+
+Container(
+  alignment: Alignment.bottomCenter,
+  child: Chip(
+    backgroundColor: Color.fromARGB(255, 191, 131, 148),
+    label: Text("Order Now",
+    style: TextStyle(
+   color: Colors.white,
+    fontSize: 12,
+    ),
+  ),
+  ),
+),
+
+
+
+
+
               ],
             ),
           ),
