@@ -52,7 +52,20 @@ class _MenuState extends State<Menu> {
                   children: [
                     Image.network(foodLists[index][0],
                     fit: BoxFit.cover,
+                    width: 150,
                     ),
+                    Expanded(
+                      child: Column(
+                        // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        children:  [
+                        Text("${foodLists[index][1]}",style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          backgroundColor: Color.fromARGB(255, 241, 224, 76)
+                        ),),
+                      ],
+                      ),
+                    )
                   ],
                 ),
               ],
