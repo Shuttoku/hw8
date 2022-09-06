@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Food Menu"),
+          title: Text("EGG HOME"),
           backgroundColor: Color.fromARGB(255, 39, 37, 37),
         ),
         body: Menu(),
